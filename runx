@@ -1,0 +1,12 @@
+
+data_dir="data/"
+run_file="${data_dir}run_id.txt"
+
+
+ifort -fast -wrap-margin- -c util.f90 field.f90  propagators.f \
+fedvr.f fedvr_conf_struct.f90 fedvr_build.f90 && \
+ifort -o out \
+util.o field.o propagators.o fedvr.o fedvr_conf_struct.o \
+fedvr_build.o -L/s/fred/lapack-3.11 -llapack -L/s/fred/lapack-3.11 -lrefblas &&
+time ./out 
+

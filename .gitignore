@@ -1,0 +1,24 @@
+# binaries
+*.out
+*.exe
+*.mod
+out
+
+# python
+__pycache__.
+*.pyc
+.venv/
+
+# data / results
+data/
+results/
+*.dat
+*.h5
+fort.*
+.nsf*
+
+# editors
+*~
+*.swp
+
+

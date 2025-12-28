@@ -1,0 +1,40 @@
+ &PARAMETERS
+ N_OC =            5
+ N_TAU =            3
+ NNBR =            5
+ LNBR =            4
+ XMAX =    10.0000000000000     
+ NSTEPS =         1000
+ FIELD STRENGTH =  0.100000000000000     
+ OMEGA  =   0.114000000000000     
+ OMG_  =    1.00000000000000     
+ KMAX  =    1.60000000000000     
+ OMG_MAX  =    1.13000000000000     
+          15
+ 
+ /mnt2/s/fred/research/uec/quantum_hhg/fedvr/analytical_include
+ data/run_02/
+           1  -1.00000000000000       0.100000000000000     
+           2 -0.654653670707977       0.544444444444445     
+           3  2.328818137280762E-082  0.711111111111111     
+           4  0.654653670707977       0.544444444444445     
+           5   1.00000000000000       0.100000000000000     
+ Construction of kinetic energy matrix
+ Time required for kinetic energy matrix  2.400000000000058E-005
+ kinetic matrix built
+ diagonalization          15
+           0
+ Time required for diagonalization (dsyevr)   8.999999999999980E-005
+ cpu time after diagonalization  3.881000000000000E-003
+           1           1           0
+ np =            5
+ ns =            4
+ nmax =           17
+ 
+           5           1  -1.00000000000000       0.100000000000000     
+           5           2 -0.654653670707977       0.544444444444445     
+           5           3  2.328818137280762E-082  0.711111111111111     
+           5           4  0.654653670707977       0.544444444444445     
+           5           5   1.00000000000000       0.100000000000000     
+ do i get here?           5           4          17
+hertz.local

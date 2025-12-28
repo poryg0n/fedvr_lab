@@ -1,0 +1,11 @@
+       open(ut40,file=trim(workdir)//'prob_density.dat',status='unknown')
+       open(ut41,file=trim(workdir)//'pemd.dat',status='unknown')
+       open(ut42,file=trim(workdir)//'hhg_spectra.dat',status='unknown')
+       open(ut43,file=trim(workdir)//'pk0_values.dat',status='unknown')
+       open(ut44,file=trim(workdir)//'pkk_values.dat',status='unknown')
+       open(ut45,file=trim(workdir)//'time_dep_obs.dat',status='unknown')
+
+!       open(ut43,file=trim(workdir)//'in_states.dat',status='unknown')
+!       open(ut44,file=trim(workdir)//'out_states.dat',status='unknown')
+
+!       open(ut46,file=trim(workdir)//'tf_dip_moment.dat',status='unknown')

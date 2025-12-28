@@ -1,0 +1,47 @@
+
+!       write(indx, '(I0)'), s
+!       indx = trim(indx)//".dat"
+!       filename4 = trim(filename40)//indx
+        indx1 = indx
+        indx2 = indx
+
+        write(indx1, '(I0,"_",I0)') s, i+1
+        write(indx2, '(I0,"_",I0)') s, i
+
+        indx1 = trim(indx1)//".dat"
+        indx2 = trim(indx2)//"_.dat"
+
+!       print *, trim(indx)
+!       write(4444,*) s, i, indx
+
+        if (i.ne.(nnbr)) then         
+           if ((i.ne.(nnbr-1)).or.(s.ne.lnbr)) then         
+  
+           filename1 = trim(filename01)//".dat"
+           filename2 = trim(filename02)//indx1
+           filename3 = trim(filename03)//indx1
+           filename4 = trim(filename04)
+           filename5 = trim(filename05)
+
+           open(ut80,file=trim(workdir)//trim(filename1),status='unknown')
+           open(ut81,file=trim(workdir)//trim(filename2),status='unknown')
+           open(ut82,file=trim(workdir)//trim(filename3),status='unknown')
+           open(ut83,file=trim(workdir)//trim(filename4),status='unknown')
+           open(ut84,file=trim(workdir)//trim(filename5),status='unknown')
+
+           end if 
+        end if
+
+        filename1_ = trim("q")//trim(filename01)//"_.dat"
+        filename2_ = trim("p")//trim(filename02)//indx2
+        filename3_ = trim("p")//trim(filename03)//indx2
+!       filename4_ = trim("d")//trim(filename04)//indx2
+!       filename5_ = trim("d")//trim(filename05)//indx2
+ 
+        open(ut90,file=trim(workdir)//trim(filename1_),status='unknown')
+        open(ut91,file=trim(workdir)//trim(filename2_),status='unknown')
+        open(ut92,file=trim(workdir)//trim(filename3_),status='unknown')
+!       open(ut93,file=trim(workdir)//trim(filename4_),status='unknown')
+!       open(ut94,file=trim(workdir)//trim(filename5_),status='unknown')
+
+

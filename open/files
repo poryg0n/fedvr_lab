@@ -1,0 +1,21 @@
+      open(ut00,file=trim(workdir)//'laser_charac.dat',status='unknown')
+      open(ut01,file=trim(workdir)//'field_data.dat',status='unknown')
+
+      open(ut10,file=trim(workdir)//'initial_cond.dat',status='unknown')
+      open(ut11,file=trim(workdir)//'eigenvalues.dat',status='unknown')
+      open(ut12,file=trim(workdir)//'eigenvectors.dat',status='unknown')
+
+      open(ut20,file=trim(workdir)//'wavfun_time.dat',            &
+                   status='unknown')
+      open(ut21,file=trim(workdir)//'wavfun_origin_time.dat',          &
+                   status='unknown')
+      open(ut22,file=trim(workdir)//'observ_time_evol.dat',status='unknown')
+      open(ut23,file=trim(workdir)//'deriv_comp_ini0.dat',status='unknown')
+      open(ut24,file=trim(workdir)//'deriv_comp_fin.dat',status='unknown')
+      open(ut30,file=trim(workdir)//'wavfun_final_conf.dat',          &
+                   status='unknown')
+      open(ut31,file=trim(workdir)//'wavfun_and_deriv_cont.dat',       &
+                   status='unknown')
+      open(ut32,file=trim(workdir)//'wavfun_and_deriv_disc.dat',       &
+                   status='unknown')
+

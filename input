@@ -1,0 +1,6 @@
+ &INPUT
+   XMAX=10.d0,
+   Nelm=4,
+   Nbas=630,
+   NOUT=100000,
+ &END

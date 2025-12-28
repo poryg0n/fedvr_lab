@@ -1,0 +1,4 @@
+           filename4 = trim(filename04)
+           filename5 = trim(filename05)
+           open(ut83,file=trim(workdir)//trim(filename4),status='unknown')
+           open(ut84,file=trim(workdir)//trim(filename5),status='unknown')

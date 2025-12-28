@@ -1,0 +1,54 @@
+
+data_dir="data/"
+run_file="${data_dir}run_id.txt"
+
+if [ ! -d "$data_dir" ]; then
+   mkdir "$data_dir"
+fi
+
+echo $run_file
+first_run="${data}/run_01"
+if [ -f "$run_file" ]; then
+# if [ -d "$first_run" ]; then
+    id=`awk '{print $0}' $run_file` \
+    id=`expr $id + 1`
+# fi
+else 
+    echo "No file has been found"
+    echo "Creating them"
+    id=1
+fi
+size=${#id} && [ ${#id} -lt 2 ] && id="0$id"
+echo $id
+
+#ifort -fast -wrap-margin- -qopenmp -c util.f90 field.f90 math_util.f90 \
+#propagators.f lobatto.f fedvr.f fedvr_basis.f90 \
+#fedvr_conf_struct.f90 fedvr_build.f90 && \
+#ifort -qopenmp -o out \
+#util.o math_util.o field.o propagators.o \
+#lobatto.o fedvr.o fedvr_conf_struct.o fedvr_build.o fedvr_basis.o \
+#-L/s/fred/lapack-3.11 -llapack -L/s/fred/lapack-3.11 -lrefblas \
+#-xcommon-avx512 &&
+
+#gfortran -Ofast -fopenmp -c util.f90 field.f90 math_util.f90 \
+#propagators.f lobatto.f fedvr.f fedvr_basis.f90 \
+#fedvr_conf_struct.f90 fedvr_build.f90 && \
+#gfortran -fopenmp -o out \
+#util.o math_util.o field.o propagators.o \
+#lobatto.o fedvr.o fedvr_conf_struct.o fedvr_build.o fedvr_basis.o \
+#time ./out 1> run_$id.log 2>&1 && hostname >> run_$id.log &&
+#
+#tail -n +8 data/run_$id/field_data.dat | head -n 1000 > data/run_$id/envelop.dat  && \
+#tail -n +1016 data/run_$id/field_data.dat | head -n 1000 > data/run_$id/efield.dat && \
+#tail -n 1000 data/run_$id/field_data.dat > data/run_$id/vecpot.dat &
+
+
+
+gfortran -Ofast -fopenmp -c util.f90 field.f90 math_util.f90 \
+propagators.f lobatto.f fedvr.f fedvr_basis.f90 \
+fedvr_conf_struct.f90 fedvr_build.f90 && \
+gfortran -fopenmp -o out \
+util.o math_util.o field.o propagators.o \
+lobatto.o fedvr.o fedvr_conf_struct.o fedvr_build.o fedvr_basis.o \
+-L/s/fred/lapack-3.11 -llapack -L/s/fred/lapack-3.11 -lrefblas &&
+time ./out
